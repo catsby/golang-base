@@ -87,10 +87,36 @@
     }
   ],
   "post-processors": [
-    {
-      "type": "vagrant",
-      "keep_input_artifact": false
-    }
+    [
+      {
+        "type": "vagrant",
+        "keep_input_artifact": false
+      },
+      {
+        "type": "atlas",
+        "only": [
+          "virtualbox-iso"
+        ],
+        "artifact": "catsby/golang-base",
+        "artifact_type": "vagrant.box",
+        "metadata": {
+          "provider": "virtualbox",
+          "version": "0.0.2"
+        }
+      },
+      {
+        "type": "atlas",
+        "only": [
+          "vmware-iso"
+        ],
+        "artifact": "catsby/golang-base",
+        "artifact_type": "vagrant.box",
+        "metadata": {
+          "provider": "vmware_desktop",
+          "version": "0.0.2"
+        }
+      }
+    ]
   ]
 }
 
