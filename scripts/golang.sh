@@ -5,9 +5,13 @@ SRCPATH="/opt/gopath"
 # Get the ARCH
 ARCH=`uname -m | sed 's|i686|386|' | sed 's|x86_64|amd64|'`
 # Get user for chown'ing
-OWN="vagrant"
-if [[ `facter virtual` != "virtualbox" ]]; then
-    OWN="ubuntu"
+OWN="ubuntu"
+if [[ `facter virtual` == "virtualbox" ]]; then
+    OWN="vagrant"
+fi
+
+if [[ `facter virtual` == "vmware" ]]; then
+    OWN="vagrant"
 fi
 
 # Install Go
