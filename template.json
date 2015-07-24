@@ -93,7 +93,7 @@
         {
             "type": "atlas",
             "only": ["vmware-iso"],
-            "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+            "artifact": "catsby/tutorialvm",
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "vmware_desktop",
@@ -103,7 +103,7 @@
         {
             "type": "atlas",
             "only": ["virtualbox-iso"],
-            "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+            "artifact": "catsby/tutorialvr",
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
