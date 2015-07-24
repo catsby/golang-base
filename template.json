@@ -138,7 +138,7 @@
         "artifact": "catsby/golang-base",
         "artifact_type": "vagrant.box",
         "metadata": {
-          "provider": "vmware_desktop",
+          "provider": "vmware",
           "version": "0.0.2"
         }
       }
