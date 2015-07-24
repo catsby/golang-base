@@ -24,6 +24,9 @@
         "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         },
+        "amazon-ebs": {
+          "execute_command": "echo 'ubuntu'|sudo -S sh '{{.Path}}'"
+        },
         "vmware-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         }
@@ -31,6 +34,17 @@
     }
   ],
   "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "us-west-2",
+      "source_ami": "ami-17471c27",
+      "instance_type": "t1.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "golang-base-{{timestamp}}",
+      "tags": {
+        "packer": "true"
+      }
+    },
     {
       "type": "virtualbox-iso",
       "boot_command": [
@@ -91,6 +105,18 @@
       {
         "type": "vagrant",
         "keep_input_artifact": false
+      },
+      {
+        "type": "atlas",
+        "only": [
+          "amazon-ebs"
+        ],
+        "artifact": "catsby/golang-base",
+        "artifact_type": "amazon.ami",
+        "metadata": {
+          "provider": "ami",
+          "version": "0.0.2"
+        }
       },
       {
         "type": "atlas",
