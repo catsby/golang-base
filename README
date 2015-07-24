@@ -1,0 +1,5 @@
+Fork of hashicorp/atlas-packer-vagrant-tutorial
+
+Packer configuration to build a base vagrant box and Amazon AMI, with golang installed.
+
+You shouldn't use this, unless you're just exploring atlas.hashicorp.com. That's fine, then.
