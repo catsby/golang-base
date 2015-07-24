@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+# filter out AWS
+if [[ `facter virtual` == "xenu" ]]; then
+    exit 0
+fi
+
 # Vagrant specific
 date > /etc/vagrant_box_build_time
 
