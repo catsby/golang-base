@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# filter out AWS
+if [[ `facter virtual` == "xenu" ]]; then
+    exit 0
+fi
 # Removing leftover leases and persistent rules
 echo "cleaning up dhcp leases"
 rm /var/lib/dhcp/*

@@ -25,7 +25,7 @@
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         },
         "amazon-ebs": {
-          "execute_command": "echo 'ubuntu'|sudo -S sh '{{.Path}}'"
+          "execute_command": "echo 'ubuntu'|sudo -S bash '{{.Path}}'"
         },
         "vmware-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
@@ -115,7 +115,7 @@
         "artifact_type": "amazon.ami",
         "metadata": {
           "provider": "ami",
-          "version": "0.0.2"
+          "version": "0.0.4"
         }
       },
       {
@@ -127,7 +127,7 @@
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "virtualbox",
-          "version": "0.0.2"
+          "version": "0.0.4"
         }
       },
       {
@@ -139,7 +139,7 @@
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "vmware",
-          "version": "0.0.2"
+          "version": "0.0.4"
         }
       }
     ]
