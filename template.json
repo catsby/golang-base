@@ -115,7 +115,7 @@
         "artifact_type": "amazon.ami",
         "metadata": {
           "provider": "ami",
-          "version": "0.0.4"
+          "version": "0.0.5"
         }
       },
       {
@@ -127,7 +127,7 @@
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "virtualbox",
-          "version": "0.0.4"
+          "version": "0.0.5"
         }
       },
       {
@@ -139,7 +139,7 @@
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "vmware",
-          "version": "0.0.4"
+          "version": "0.0.5"
         }
       }
     ]
