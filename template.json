@@ -37,8 +37,8 @@
     {
       "type": "amazon-ebs",
       "region": "us-west-2",
-      "source_ami": "ami-17471c27",
-      "instance_type": "t1.micro",
+      "source_ami": "ami-534d5d32",
+      "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
       "ami_name": "golang-base-{{timestamp}}",
       "tags": {
